@@ -22,9 +22,16 @@
     self.title = @"Passing Data";
     
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge moduleName:@"PassingData"];
     
-    rootView.initialProperties = @{
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge moduleName:@"PassingData"];
+    rootView.frame = [UIScreen mainScreen].bounds;
+    rootView.initialProperties = [self data];
+    
+    [self.view addSubview:rootView];
+}
+
+- (NSDictionary *)data {
+    return @{
         @"data": @[
             @"Here",
             @"is",
@@ -46,9 +53,6 @@
             @"View",
         ]
     };
-    
-    rootView.frame = [UIScreen mainScreen].bounds;
-    [self.view addSubview:rootView];
 }
 
 @end

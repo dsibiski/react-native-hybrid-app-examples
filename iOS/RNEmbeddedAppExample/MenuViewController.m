@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     data = @{
-        @"sectionTitles": @[@"First Section"],
+        @"sectionTitles": @[@"Simple"],
         @"sectionKeys": @[
             @[@"ViewInView", @"PassingData"]
         ],

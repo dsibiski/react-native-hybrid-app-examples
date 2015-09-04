@@ -21,4 +21,8 @@
  */
 @property (nonatomic, strong) RCTBridge *bridge;
 
+// This method allows us to have access to `NativeModules` that have
+// already been instantiated by the bridge.
+- (id)nativeModuleForString:(NSString *)moduleName;
+
 @end

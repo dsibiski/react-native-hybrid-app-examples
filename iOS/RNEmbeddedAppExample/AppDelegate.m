@@ -62,4 +62,8 @@
     return YES;
 }
 
+- (id)nativeModuleForString:(NSString *)moduleName {
+    return self.bridge.modules[moduleName];
+}
+
 @end

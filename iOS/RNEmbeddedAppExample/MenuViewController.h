@@ -10,6 +10,4 @@
 
 @interface MenuViewController : UITableViewController
 
-@property (nonatomic, retain) NSDictionary *data;
-
 @end

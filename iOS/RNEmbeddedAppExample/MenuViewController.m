@@ -15,9 +15,9 @@
 
 @end
 
-@implementation MenuViewController
-
-@synthesize data;
+@implementation MenuViewController {
+    NSDictionary *data;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

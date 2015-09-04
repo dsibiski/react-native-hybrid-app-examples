@@ -24,6 +24,9 @@ class SimpleList extends React.Component {
     }
 
     _rowPressed(row) {
+        if (this.props.rowPressed) {
+            this.props.rowPressed(row);
+        }
         console.log(row);
     }
 

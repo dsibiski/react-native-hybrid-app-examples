@@ -28,6 +28,9 @@
 		55E165AE1B97D55C006817EA /* ViewInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E165AD1B97D55C006817EA /* ViewInViewController.xib */; };
 		55E165B21B97D878006817EA /* PassingDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E165B01B97D878006817EA /* PassingDataViewController.m */; };
 		55E165B31B97D878006817EA /* PassingDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E165B11B97D878006817EA /* PassingDataViewController.xib */; };
+		55F3379F1B9A39C6001852D9 /* ModalWithNavigatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F3379D1B9A39C6001852D9 /* ModalWithNavigatorViewController.m */; };
+		55F337A01B9A39C6001852D9 /* ModalWithNavigatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F3379E1B9A39C6001852D9 /* ModalWithNavigatorViewController.xib */; };
+		55F337A61B9A41C3001852D9 /* ModalWithNavigatorCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F337A51B9A41C3001852D9 /* ModalWithNavigatorCoordinator.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +143,11 @@
 		55E165AF1B97D878006817EA /* PassingDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = PassingDataViewController.h; sourceTree = "<group>"; tabWidth = 4; };
 		55E165B01B97D878006817EA /* PassingDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = PassingDataViewController.m; sourceTree = "<group>"; tabWidth = 4; };
 		55E165B11B97D878006817EA /* PassingDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PassingDataViewController.xib; sourceTree = "<group>"; };
+		55F3379C1B9A39C6001852D9 /* ModalWithNavigatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ModalWithNavigatorViewController.h; sourceTree = "<group>"; tabWidth = 4; };
+		55F3379D1B9A39C6001852D9 /* ModalWithNavigatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWithNavigatorViewController.m; sourceTree = "<group>"; tabWidth = 4; };
+		55F3379E1B9A39C6001852D9 /* ModalWithNavigatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalWithNavigatorViewController.xib; sourceTree = "<group>"; };
+		55F337A41B9A41C3001852D9 /* ModalWithNavigatorCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWithNavigatorCoordinator.h; sourceTree = "<group>"; };
+		55F337A51B9A41C3001852D9 /* ModalWithNavigatorCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalWithNavigatorCoordinator.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,22 +256,19 @@
 		13B07FAE1A68108700A75B9A /* RNEmbeddedAppExample */ = {
 			isa = PBXGroup;
 			children = (
+				55F3379A1B9A3989001852D9 /* ViewInVIew */,
+				55F3379B1B9A3990001852D9 /* PassingData */,
+				55F3378F1B9A3973001852D9 /* ModalWithNavigator */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				554BCDE31B97AD11000A22EB /* MenuViewController.h */,
+				554BCDE41B97AD11000A22EB /* MenuViewController.m */,
+				554BCDE51B97AD11000A22EB /* MenuViewController.xib */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				554BCDE31B97AD11000A22EB /* MenuViewController.h */,
-				554BCDE41B97AD11000A22EB /* MenuViewController.m */,
-				554BCDE51B97AD11000A22EB /* MenuViewController.xib */,
-				55E165A01B97CF37006817EA /* ViewInViewController.h */,
-				55E165A11B97CF37006817EA /* ViewInViewController.m */,
-				55E165AD1B97D55C006817EA /* ViewInViewController.xib */,
-				55E165AF1B97D878006817EA /* PassingDataViewController.h */,
-				55E165B01B97D878006817EA /* PassingDataViewController.m */,
-				55E165B11B97D878006817EA /* PassingDataViewController.xib */,
 			);
 			path = RNEmbeddedAppExample;
 			sourceTree = "<group>";
@@ -274,6 +279,38 @@
 				146834041AC3E56700842450 /* libReact.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		55F3378F1B9A3973001852D9 /* ModalWithNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				55F3379C1B9A39C6001852D9 /* ModalWithNavigatorViewController.h */,
+				55F3379D1B9A39C6001852D9 /* ModalWithNavigatorViewController.m */,
+				55F3379E1B9A39C6001852D9 /* ModalWithNavigatorViewController.xib */,
+				55F337A41B9A41C3001852D9 /* ModalWithNavigatorCoordinator.h */,
+				55F337A51B9A41C3001852D9 /* ModalWithNavigatorCoordinator.m */,
+			);
+			name = ModalWithNavigator;
+			sourceTree = "<group>";
+		};
+		55F3379A1B9A3989001852D9 /* ViewInVIew */ = {
+			isa = PBXGroup;
+			children = (
+				55E165A01B97CF37006817EA /* ViewInViewController.h */,
+				55E165A11B97CF37006817EA /* ViewInViewController.m */,
+				55E165AD1B97D55C006817EA /* ViewInViewController.xib */,
+			);
+			name = ViewInVIew;
+			sourceTree = "<group>";
+		};
+		55F3379B1B9A3990001852D9 /* PassingData */ = {
+			isa = PBXGroup;
+			children = (
+				55E165AF1B97D878006817EA /* PassingDataViewController.h */,
+				55E165B01B97D878006817EA /* PassingDataViewController.m */,
+				55E165B11B97D878006817EA /* PassingDataViewController.xib */,
+			);
+			name = PassingData;
 			sourceTree = "<group>";
 		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
@@ -534,6 +571,7 @@
 				55E165B31B97D878006817EA /* PassingDataViewController.xib in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				55F337A01B9A39C6001852D9 /* ModalWithNavigatorViewController.xib in Resources */,
 				554BCDE71B97AD11000A22EB /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,8 +593,10 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				55E165B21B97D878006817EA /* PassingDataViewController.m in Sources */,
+				55F3379F1B9A39C6001852D9 /* ModalWithNavigatorViewController.m in Sources */,
 				554BCDE61B97AD11000A22EB /* MenuViewController.m in Sources */,
 				55E165A21B97CF37006817EA /* ViewInViewController.m in Sources */,
+				55F337A61B9A41C3001852D9 /* ModalWithNavigatorCoordinator.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

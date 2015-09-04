@@ -46,10 +46,13 @@
     
     //   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
     
+    // Here we are instantiating the `RCTBridge` to be used in other parts of the app later.
     bridge = [[RCTBridge alloc] initWithBundleURL:jsCodeLocation
                                    moduleProvider:nil
                                     launchOptions:launchOptions];
     
+     // Instead of creating a `RCTRootView` here and setting it as the `rootViewController`, we are
+     // creating a `menuViewController` for Demo purposes.
     MenuViewController *menuViewController = [[MenuViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
     

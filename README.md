@@ -78,7 +78,25 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge modu
    - Using a [Coordinator](https://github.com/dsibiski/react-native-embedded-app-example/blob/master/iOS/RNEmbeddedAppExample/ModalWithNavigatorCoordinator.m) native module, we are able to `delegate` method calls to the native Obj-C container.
      - **Why don't we just export the methods directly on the Obj-C container itself?** When a bridge is initialized, each native module gets instantiated and the bridge holds that instance. If we were to create another instance of that Obj-C container (from within our base Obj-C app), the JS calls wouldn't be able to use that instance, since it only knows about the instance on the bridge.
        - For this reason, we pass in a `delegate` to the native module instance on the bridge **after** the `RCTBridge` and `RCTRootView` are created.
-         - ie. `[(MyNativeModule *)[myAppdelegate.bridge.modules[@"MyNativeModule"] setDelegate:self]];`
+       - For example:
+            
+            ```objc
+            [(MyNativeModule *)[myAppdelegate.bridge.modules[@"MyNativeModule"] setDelegate:self]];
+            ```
+     - **Why don't we use the `moduleProvider` block to pass in instances of the modules when the bridge loads?** Since, we are trying to load the bridge at startup, for performance gains, we don't yet have the instance of all of our view controllers.
+       - It's possible to do this (and perhaps recommended - no need for a `Coordinator`), but you would need to create your bridges when your container view controller loads, this could cause performance issues if you want your React Native components to display immediately.
+       - For example (when loading your container view controller):
+
+            ```objc
+            RCTBridge *bridge = [[RCTBridge alloc] initWithBundleURL:jsCodeLocation 
+                                                  moduleProvider:^ NSArray *{
+                                                    return @[self];
+                                                  }
+                                                   launchOptions:nil];
+
+            RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName: @"MyModule"];
+            ```
+       - There is more discussion about this technique [here](https://github.com/facebook/react-native/issues/1398).
          
 ### Questions? Suggestions?
 

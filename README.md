@@ -1,6 +1,67 @@
 # React Native Embedded App Example
 A collection of examples for using React Native in an existing iOS application
 
+### Concepts
+
+#### Pre-loading the Bridge
+One of the first things that you should do, if you want decent performance out of your hybrid app, is to pre-load your `RCTBridge` and keep a reference of it somewhere (possibly your `AppDelegate`):
+
+*AppDelegate.h*
+```objc
+@property (nonatomic, strong) RCTBridge *bridge;
+```
+*AppDelegate.m*
+```objc
+@synthesize bridge;
+...
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    ...configure the jsCodeLocation here...
+
+    bridge = [[RCTBridge alloc] initWithBundleURL:jsCodeLocation
+                                   moduleProvider:nil
+                                    launchOptions:launchOptions];
+                                    
+    ...setup your rootViewController here...
+    
+    return YES;
+}
+```
+
+This will allow the JavaScript to pre-load and allow you to use this bridge later on in other parts of the app:
+
+```objc
+AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge moduleName:@"MyModule"];
+```
+
+#### Multiple "Entry" Points
+
+In your `index.ios.js` file, you can "register" different modules that you want to use as seperate entry points in your app:
+
+```javascript
+var React = require('react-native');
+var {
+  AppRegistry,
+} = React;
+
+var MainEntry = require('./Main');
+var SecondEntry = require('./Second');
+var ThirdEntry = require('./Third');
+
+AppRegistry.registerComponent('MainEntry', () => MainEntry);
+AppRegistry.registerComponent('SecondEntry', () => SecondEntry);
+AppRegistry.registerComponent('ThirdEntry', () => ThirdEntry);
+```
+
+You can then pass these in as the `moduleName` when creating a `RCTRootView`:
+
+```objc
+RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge moduleName:@"SecondEntry"];
+```
+
 ### Examples
 
 #### Simple

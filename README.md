@@ -97,6 +97,18 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge modu
             RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName: @"MyModule"];
             ```
        - There is more discussion about this technique [here](https://github.com/facebook/react-native/issues/1398).
+       
+### Discussions About Hybrid Apps
+
+- [[NavigatorIOS] integration with navigator in existing native app #2442](https://github.com/facebook/react-native/issues/2442)
+- [[Request] Invoke Methods of Native UI Components #2272](https://github.com/facebook/react-native/issues/2272)
+- [[Integration w/ Existing App] How to pass the native navigation controller into a react-native root view component? #1422](https://github.com/facebook/react-native/issues/1422)
+- [[Integration w/ Existing App] Multiple react-native Applications Design #1398](https://github.com/facebook/react-native/issues/1398)
+- [[Perf] Small delay displaying RCTRootView after a push #1277](https://github.com/facebook/react-native/issues/1277)
+- [Multiples Components best practices: sharing bridge? #1073](https://github.com/facebook/react-native/issues/1073)
+- [Forcing view refresh #1049](https://github.com/facebook/react-native/issues/1049)
+- [Best practice to integrate existing app with React-Native #995](https://github.com/facebook/react-native/issues/995)
+- [[Initialization] Decouple script loading and environment setup from the root view #66](https://github.com/facebook/react-native/pull/66)
          
 ### Questions? Suggestions?
 

@@ -1,4 +1,4 @@
-# React Native Embedded App Example
+# React Native Hybrid App Examples
 A collection of examples for using React Native in an existing iOS application
 
 ### Concepts

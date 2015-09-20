@@ -100,6 +100,7 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge modu
        
 ### Discussions About Hybrid Apps
 
+- [Extend NavigatorIOS to support obj-c view controllers for hybrid apps #2886](https://github.com/facebook/react-native/pull/2886)
 - [[NavigatorIOS] integration with navigator in existing native app #2442](https://github.com/facebook/react-native/issues/2442)
 - [[Request] Invoke Methods of Native UI Components #2272](https://github.com/facebook/react-native/issues/2272)
 - [[Integration w/ Existing App] How to pass the native navigation controller into a react-native root view component? #1422](https://github.com/facebook/react-native/issues/1422)

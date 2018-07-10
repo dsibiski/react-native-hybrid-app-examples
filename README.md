@@ -34,7 +34,7 @@ This will allow the JavaScript to pre-load and allow you to use this bridge late
 ```objc
 AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge moduleName:@"MyModule"];
+RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:delegate.bridge moduleName:@"MyModule" initialProperties:nil];
 ```
 
 #### Multiple "Entry" Points
